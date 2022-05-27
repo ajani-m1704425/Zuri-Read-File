@@ -16,6 +16,9 @@ def count_words():
     text_list = text.split(" ")
     text_dict = {}
     for x in text_list:
+        if "\n" in x:
+            y = x.replace("\n", "")
+            x = y
         if x in text_dict:
             text_dict[x] += 1
         else:
